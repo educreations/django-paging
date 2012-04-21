@@ -8,7 +8,7 @@ clean:
 	dh_testroot
 	
 	rm -rf build django-paging.egg-info   
-#	find django-sentry/ -name *.pyc | xargs rm -f
+#	find django-paging/ -name *.pyc | xargs rm -f
 	
 	dh_clean
 
