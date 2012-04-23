@@ -6,7 +6,7 @@ A simple and efficient paginator.
 Jinja2
 ------
 
-Jinja2 is supported via Coffin::
+Jinja2_ is supported via Coffin_::
 
 	{% with paginate(request, my_queryset) as results %}
 	  {{ results.paging }}
@@ -15,6 +15,21 @@ Jinja2 is supported via Coffin::
 	  {% endfor %}
 	  {{ results.paging }}
 	{% endwith %}
+
+
+Jinja2_ is also supported via Jingo_::
+
+	{% set paginate(request, my_queryset, per_page=25, endless=False, range_gap=3) as results %}
+	  {# results.paging is not implemented for Jingo, make your own template... #}
+	  {% for result in results.objects %}
+	    {{ result }}
+	  {% endfor %}
+	{% endwith %}
+
+
+    .. _Jinja2: http://jinja.pocoo.org/2/
+    .. _Coffin: https://github.com/coffin/coffin/
+    .. _Jingo: https://github.com/jbalogh/jingo
 
 Django
 ------
