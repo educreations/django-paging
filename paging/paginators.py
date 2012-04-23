@@ -21,9 +21,8 @@ class BetterPaginator(Paginator):
         try:
             paginator = self.page(page)
         except EmptyPage:
-            return {
-                'EMPTY_PAGE': True,
-            }
+            page = self.num_pages
+            paginator = self.page(page)
         
         if page > 5:
             start = page-range_gap
