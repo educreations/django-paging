@@ -47,6 +47,9 @@ class BetterPaginator(Paginator):
             'next_page': paginator.next_page_number(),
             'is_first': page == 1,
             'is_last': page == self.num_pages,
+            'start_index': paginator.start_index(),
+            'end_index': paginator.end_index(),
+            'count': self.count,
         }
         
         return context
