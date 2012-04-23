@@ -17,7 +17,7 @@ Jinja2_ is supported via Coffin_::
 	{% endwith %}
 
 
-Jinja2_ is also supported via Jingo_::
+Jinja2 is also supported via Jingo_::
 
 	{% set paginate(request, my_queryset, per_page=25, endless=False, range_gap=3) as results %}
 	  {# results.paging is not implemented for Jingo, make your own template... #}
@@ -34,7 +34,7 @@ Jinja2_ is also supported via Jingo_::
 Django
 ------
 
-Django templatetags require django-templatetag-sugar::
+Django templatetags require django-templatetag-sugar_::
 
 	{% load paging_extras %}
 	
@@ -44,3 +44,5 @@ Django templatetags require django-templatetag-sugar::
 	  {{ result }}
 	{% endfor %}
 	{{ results.paging }}
+
+.. _django-templatetag-sugar: https://github.com/alex/django-templatetag-sugar
