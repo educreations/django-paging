@@ -27,9 +27,9 @@ Jinja2_ is also supported via Jingo_::
 	{% endwith %}
 
 
-    .. _Jinja2: http://jinja.pocoo.org/2/
-    .. _Coffin: https://github.com/coffin/coffin/
-    .. _Jingo: https://github.com/jbalogh/jingo
+.. _Jinja2: http://jinja.pocoo.org/2/
+.. _Coffin: https://github.com/coffin/coffin/
+.. _Jingo: https://github.com/jbalogh/jingo
 
 Django
 ------
