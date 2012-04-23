@@ -21,7 +21,7 @@ Jinja2_ is also supported via Jingo_::
 
 	{% set paginate(request, my_queryset, per_page=25, endless=False, range_gap=3) as results %}
 	  {# results.paging is not implemented for Jingo, make your own template... #}
-	  {% for result in results.objects %}
+	  {% for result in results.paginator.objects %}
 	    {{ result }}
 	  {% endfor %}
 	{% endwith %}
