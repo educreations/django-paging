@@ -1,6 +1,8 @@
-from paging.paginators import *
+from paging.paginators import EndlessPaginator, BetterPaginator
+from jingo import register
 
-def paginate(request, queryset_or_list, per_page=25, endless=True):
+@register.function
+def paginate(request, queryset_or_list, per_page=25, endless=True, range_gap=2):
     if endless:
         paginator_class = EndlessPaginator
     else:
@@ -21,6 +23,6 @@ def paginate(request, queryset_or_list, per_page=25, endless=True):
 
     context = {
         'query_string': query_dict.urlencode(),
-        'paginator': paginator.get_context(page),
+        'paginator': paginator.get_context(page, range_gap=range_gap),
     }
     return context
